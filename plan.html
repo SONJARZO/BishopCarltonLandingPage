@@ -1,0 +1,810 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Clarity Go-to-Market Plan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Lora&display=swap" rel="stylesheet">
+<style>
+:root{--cds-gap-xs:4px;--cds-gap-sm:8px;--cds-gap-md:16px;--cds-gap-lg:24px;--cds-gap-xl:40px;--cds-pad-xs:4px;--cds-pad-sm:8px;--cds-pad-md:14px;--cds-pad-lg:20px;--cds-pad-xl:32px;--cds-radius:12px;--cds-font-size-caption:13px;--cds-font-size-body:15px;--cds-font-size-heading:20px;--cds-font-size-title:32px;--cds-font-weight-medium:600;--font-anthropic-sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;--font-anthropic-serif:"Lora",Georgia,"Times New Roman",serif;--cds-dur-slow:.45s;--cds-ease-out:cubic-bezier(.2,.8,.2,1)}
+*{box-sizing:border-box}
+html,body{margin:0;background:#ffffff;color:#111111;-webkit-text-size-adjust:100%}
+.cl-foot{font-size:12px;color:#444;text-align:center;padding:8px 0 24px}
+
+
+.cl p,.cl li,.cl td,.cl th,.cl h1,.cl h2,.cl h3,.cl small,.cl em,.cl-wkname,.cl-wkfocus,.cl-legend,.cl-lab,.cl-sub,.cl-note,.cl-take{color:#111111}
+.cl th{font-weight:600}
+.cl{--color-bg:#ffffff;--color-panel:#ffffff;--color-fg:#111111;--color-fg-muted:#2b2b2b;--color-border-line:#e3e8f0;--cds-chart-grid:#eef3fb;--cds-chart-muted:#c7d8f2;--color-bad:#d93025;--color-warn:#b26a00;
+  background:#ffffff;color:#111111;font-family:var(--font-anthropic-sans);padding:clamp(16px,4vw,40px);display:flex;flex-direction:column;gap:var(--cds-gap-xl);min-height:100%}
+.cl > *{max-width:1180px;width:100%;margin-inline:auto}
+.cl-hero{position:relative;overflow:hidden;color:#111111;background:#ffffff;border:1px solid #e3e8f0;border-top:8px solid #1f6fd1;border-radius:var(--cds-radius);padding:var(--cds-pad-xl);display:flex;flex-direction:column;gap:var(--cds-gap-md);box-shadow:0 10px 30px rgba(31,111,209,.10)}
+.cl-hero::before{content:"";position:absolute;width:20rem;height:20rem;right:-7rem;top:-9rem;border-radius:50%;background:radial-gradient(circle,rgba(242,169,0,.28),rgba(242,169,0,0) 70%);pointer-events:none}
+.cl-hero > *{position:relative}
+.cl-eyebrow{font-size:var(--cds-font-size-caption);letter-spacing:.14em;text-transform:uppercase;color:#d48f00;font-weight:var(--cds-font-weight-medium)}
+.cl-hero h1{font-family:var(--font-anthropic-serif);font-weight:400;font-size:clamp(1.8rem,5vw,2.8rem);margin:0;color:#111111}
+.cl-take{font-size:var(--cds-font-size-body);margin:0;color:#111111;max-width:60ch}
+.cl-count{display:flex;gap:var(--cds-gap-sm);flex-wrap:wrap;align-items:flex-end}
+.cl-cbox{background:#1f6fd1;border-radius:var(--cds-radius);padding:var(--cds-pad-sm) var(--cds-pad-md);min-width:4.75rem;text-align:center;box-shadow:0 6px 16px rgba(31,111,209,.25)}
+.cl-cbox b{display:block;font-family:var(--font-anthropic-serif);font-weight:400;font-size:var(--cds-font-size-title);color:#ffffff;font-variant-numeric:tabular-nums}
+.cl-cbox span{font-size:var(--cds-font-size-caption);color:#ffd36b;font-weight:var(--cds-font-weight-medium)}
+.cl-clabel{font-family:var(--font-anthropic-serif);font-weight:400;font-size:clamp(1.25rem,3.2vw,1.75rem);line-height:1.3;color:#1f6fd1;width:100%;margin-bottom:var(--cds-gap-xs)}
+@media (prefers-reduced-motion:no-preference){.cl-cbox{animation:cl-pop var(--cds-dur-slow) var(--cds-ease-out) both}.cl-cbox:nth-child(2){animation-delay:.08s}.cl-cbox:nth-child(3){animation-delay:.16s}@keyframes cl-pop{from{opacity:0;transform:translateY(8px) scale(.96)}to{opacity:1;transform:none}}}
+.cl-cds{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,22rem),1fr));gap:var(--cds-gap-md);margin-top:var(--cds-gap-sm)}
+.cl-cdpanel{background:#f3f8ff;border:1px solid #cfe0f7;border-radius:var(--cds-radius);padding:var(--cds-pad-lg);display:flex;flex-direction:column;gap:var(--cds-gap-sm)}
+.cl-cdpub{background:#fff8e6;border-color:#f6d98a}
+.cl-cdpub .cl-cbox{background:#f2a900;box-shadow:0 6px 16px rgba(242,169,0,.3)}
+.cl-cdpub .cl-cbox span{color:#111111}
+.cl-cdpub .cl-clabel{color:#111111}
+.cl-tag{align-self:flex-start;font-size:var(--cds-font-size-caption);letter-spacing:.1em;text-transform:uppercase;font-weight:600;color:#ffffff;background:#1f6fd1;border-radius:999px;padding:2px 10px}
+.cl-tagpub{background:#111111;color:#ffd36b}
+.cl-cdpanel .cl-clabel{font-size:clamp(1.1rem,2.6vw,1.4rem);margin:0}
+.cl-tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,10rem),1fr));gap:var(--cds-gap-md)}
+.cl-card{color:#111111;background:var(--color-panel);border:1px solid var(--color-border-line);border-radius:var(--cds-radius);padding:var(--cds-pad-lg);min-width:0}
+.cl-tile{border-top:5px solid #1f6fd1;box-shadow:0 4px 14px rgba(11,31,74,.06)}.cl-tiles .cl-tile:nth-child(even){border-top-color:#f2a900}
+.cl-tile .cl-lab{font-size:var(--cds-font-size-caption);color:var(--color-fg-muted)}
+.cl-tile .cl-num{font-family:var(--font-anthropic-serif);font-weight:400;font-size:var(--cds-font-size-title);font-variant-numeric:tabular-nums;margin-top:var(--cds-gap-xs)}
+.cl-tile .cl-sub{font-size:var(--cds-font-size-caption);color:var(--color-fg-muted);margin-top:var(--cds-gap-xs)}
+.cl-prog{height:12px;border-radius:6px;background:var(--cds-chart-grid);overflow:hidden;margin-top:var(--cds-gap-sm)}
+.cl-prog i{display:block;height:100%;background:linear-gradient(90deg,#1f6fd1,#f2a900);border-radius:6px;width:0}
+.cl h2{font-size:var(--cds-font-size-heading);font-weight:var(--cds-font-weight-medium);margin:0 0 var(--cds-gap-xs)}
+.cl-sec-e{font-size:var(--cds-font-size-caption);letter-spacing:.12em;text-transform:uppercase;color:#1f6fd1;font-weight:var(--cds-font-weight-medium);margin-bottom:var(--cds-gap-xs)}
+.cl-note{font-size:var(--cds-font-size-caption);color:var(--color-fg-muted);margin:0 0 var(--cds-gap-md)}
+.cl-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,20rem),1fr));gap:var(--cds-gap-md)}
+.cl-card h3{font-size:var(--cds-font-size-body);font-weight:var(--cds-font-weight-medium);margin:0 0 var(--cds-gap-sm)}
+.cl-card ul{margin:0;padding-left:1.1rem;display:flex;flex-direction:column;gap:var(--cds-gap-xs);font-size:var(--cds-font-size-body)}
+.cl-wk{display:flex;flex-direction:column;gap:var(--cds-gap-md);min-height:12rem}
+.cl-wkrow{display:grid;grid-template-columns:minmax(6rem,9rem) 1fr;gap:var(--cds-gap-sm);align-items:center}
+.cl-wkname{font-size:var(--cds-font-size-caption)}
+.cl-wkname small{display:block;color:var(--color-fg-muted)}
+.cl-wkbar{position:relative;height:22px;background:var(--cds-chart-grid);border-radius:6px}
+.cl-wkbar .t{position:absolute;inset:0 auto 0 0;background:var(--cds-chart-muted);border-radius:6px}
+.cl-wkbar .a{position:absolute;inset:0 auto 0 0;background:#f2a900;border-radius:6px}
+.cl-wkbar em{position:absolute;right:6px;top:2px;font-style:normal;font-size:var(--cds-font-size-caption);font-variant-numeric:tabular-nums}
+.cl-wkfocus{grid-column:2;font-size:var(--cds-font-size-caption);color:var(--color-fg-muted);margin-top:-4px}
+.cl-legend{display:flex;gap:var(--cds-gap-md);font-size:var(--cds-font-size-caption);color:var(--color-fg-muted);margin-bottom:var(--cds-gap-md)}
+.cl-legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:4px;vertical-align:-1px}
+.cl-tw{overflow:auto;max-height:34rem}
+.cl table{width:100%;border-collapse:collapse;font-size:var(--cds-font-size-caption)}
+.cl th{position:sticky;top:0;background:var(--color-panel);text-align:left;font-weight:var(--cds-font-weight-medium);color:var(--color-fg-muted);padding:var(--cds-pad-xs) var(--cds-pad-sm);border-bottom:1px solid var(--color-border-line);white-space:nowrap}
+.cl td{padding:var(--cds-pad-sm);border-bottom:1px solid var(--color-border-line);vertical-align:top}
+.cl td.n{font-variant-numeric:tabular-nums;white-space:nowrap}
+.cl-pill{display:inline-block;padding:1px 8px;border-radius:999px;border:1px solid var(--color-border-line);white-space:nowrap}
+.cl-crit{color:var(--color-bad);border-color:currentColor}
+.cl-high{color:var(--color-warn);border-color:currentColor}
+.cl-tabs{display:flex;gap:var(--cds-gap-xs);flex-wrap:wrap;margin-bottom:var(--cds-gap-md)}
+.cl-tabs button{font:inherit;font-size:var(--cds-font-size-caption);padding:4px 12px;border-radius:999px;border:1px solid var(--color-border-line);background:transparent;color:inherit;cursor:pointer}
+.cl-tabs button[aria-pressed=true]{background:#1f6fd1;color:#ffffff;border-color:#1f6fd1}
+.cl-hide{display:none}
+.cl-flag{border-left:4px solid #f2a900}
+[data-dash-source-state=empty]{color:transparent}
+[data-dash-source-state=refreshing]{opacity:.5;transition:opacity var(--cds-dur-slow)}
+@media (max-width:560px){.cl .cl-opt{display:none}}
+</style>
+</head>
+<body>
+
+
+<div class="cl">
+  <header class="cl-hero" id="top">
+    <div class="cl-eyebrow">Bishop Chadwick F. Carlton · Clarity · Coming 2027</div>
+    <h1>Clarity Go-to-Market Plan</h1>
+    <p class="cl-take" id="cl-take">Founding Reader pre-sale plan for the marketing team.</p>
+    <div class="cl-cds">
+      <div class="cl-cdpanel">
+        <div class="cl-tag">Team countdown · internal</div>
+        <div class="cl-clabel" id="cl-clabel">Countdown</div>
+        <div class="cl-count">
+          <div class="cl-cbox"><b id="cd-d">—</b><span>days</span></div>
+          <div class="cl-cbox"><b id="cd-h">—</b><span>hours</span></div>
+          <div class="cl-cbox"><b id="cd-m">—</b><span>min</span></div>
+        </div>
+      </div>
+      <div class="cl-cdpanel cl-cdpub">
+        <div class="cl-tag cl-tagpub">Public sale countdown</div>
+        <div class="cl-clabel" id="cl-plabel">Countdown</div>
+        <div class="cl-count">
+          <div class="cl-cbox"><b id="pd-d">—</b><span>days</span></div>
+          <div class="cl-cbox"><b id="pd-h">—</b><span>hours</span></div>
+          <div class="cl-cbox"><b id="pd-m">—</b><span>min</span></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <section id="numbers">
+    <div class="cl-tiles">
+      <div class="cl-card cl-tile"><div class="cl-lab">Founding copies sold</div><div class="cl-num" data-source="campaign" data-field="sold" data-row="0">—</div><div class="cl-prog"><i id="cl-progbar"></i></div><div class="cl-sub" id="cl-pct">of goal</div></div>
+      <div class="cl-card cl-tile"><div class="cl-lab">Founding goal</div><div class="cl-num" data-source="campaign" data-field="goal" data-row="0">—</div><div class="cl-sub">Founding Reader copies</div></div>
+      <div class="cl-card cl-tile"><div class="cl-lab">Copies left to sell</div><div class="cl-num" data-source="totals" data-field="remaining">—</div><div class="cl-sub">Goal minus sold</div></div>
+      <div class="cl-card cl-tile"><div class="cl-lab">Founding price</div><div class="cl-num" data-source="campaign" data-field="price" data-row="0">—</div><div class="cl-sub">Oct 25 to Nov 8, 2026</div></div>
+      <div class="cl-card cl-tile"><div class="cl-lab">Revenue at goal</div><div class="cl-num" data-source="totals" data-field="revenue_goal">—</div><div class="cl-sub">Before shipping. Funds editing</div></div>
+    </div>
+  </section>
+
+  <section id="sales-plan">
+    <div class="cl-sec-e">Sales plan</div>
+    <h2>Weekly targets to reach the goal</h2>
+    <p class="cl-note">Sales open Sunday, Oct 25 at the church table and run through Nov 8, 2026. Oct 17 to 24 is team prep and buzz, with no sales.</p>
+    <div class="cl-card">
+      <div class="cl-legend"><span><i style="background:var(--cds-chart-muted)"></i>Target</span><span><i style="background:#f2a900"></i>Sold</span></div>
+      <div class="cl-wk" id="cl-wk" data-source="weekly_targets"></div>
+    </div>
+  </section>
+
+  <section id="strategy">
+    <div class="cl-sec-e">Strategy</div>
+    <h2>Message, audiences, and channels</h2>
+    <p class="cl-note">All copy comes from the manuscript. Say "Coming 2027" only, never a month.</p>
+    <div class="cl-grid">
+      <div class="cl-card"><h3>Core message</h3><ul>
+        <li>Everyone says "we want change." What we need first is clarity: seeing better days through the smog of life.</li>
+        <li>The "winds" of life reveal what is stable and what must be surrendered.</li>
+        <li>Founding Readers get the founding price and a live Q&amp;A with the Bishop.</li>
+        <li>The Companion Study Guide is printed inside the book.</li>
+      </ul></div>
+      <div class="cl-card"><h3>Who we're reaching</h3><ul>
+        <li>Healing H2O congregation, Dulles, VA</li>
+        <li>COGIC network, including the churches in Korea</li>
+        <li>The Bishop's circles: University of Maryland football, sports business</li>
+        <li>Readers of centering prayer, Thurman, Keating, and stoicism</li>
+        <li>Small groups and Bible studies (13-session Study Guide)</li>
+      </ul></div>
+      <div class="cl-card"><h3>Channels</h3><ul>
+        <li>Pulpit announcements and the church bulletin</li>
+        <li>Church table on Oct 25: buy one for you, one for a friend</li>
+        <li>Facebook, Instagram, and TikTok, twice a week</li>
+        <li>Lobby poster and flyers</li>
+        <li>Email, text, and personal outreach from the Bishop</li>
+      </ul></div>
+      <div class="cl-card"><h3>Phases</h3><ul>
+        <li><b>Team prep and buzz:</b> Oct 17 to 24 (no sales)</li>
+        <li><b>Founding sale:</b> Oct 25 to Nov 8, 2026</li>
+        <li><b>Build the list:</b> Nov 9 until launch</li>
+        <li><b>Launch:</b> 2027</li>
+        <li><b>After launch:</b> reviews, study groups, speaking</li>
+      </ul></div>
+    </div>
+  </section>
+
+  <section id="church-table">
+    <div class="cl-sec-e">Sunday, October 25</div>
+    <h2>Church table checklist</h2>
+    <p class="cl-note">Opening day of the sale. Sales at the table are pre-orders. Have the payment link or card reader tested before Sunday.</p>
+    <div class="cl-card cl-tw">
+      <table data-source="church_table" data-row-key="step"><thead><tr>
+        <th data-field="step">#</th><th data-field="task">Task</th><th data-field="due">Due</th><th data-field="status">Status</th>
+      </tr></thead><tbody id="tb-table"></tbody></table>
+    </div>
+  </section>
+
+  <section id="print">
+    <div class="cl-sec-e">Print</div>
+    <h2>Poster, flyers, and table signs</h2>
+    <p class="cl-note">Quantities are suggestions. Every printed piece carries the cover, the price, the Nov 8 deadline, and a QR code to the website.</p>
+    <div class="cl-card cl-tw">
+      <table data-source="print_materials" data-row-key="item"><thead><tr>
+        <th data-field="item">Item</th><th data-field="size">Size</th><th data-field="qty">Qty</th><th data-field="use" class="cl-opt">Use</th><th data-field="order_by">Order by</th><th data-field="needed_by">Needed by</th><th data-field="status" class="cl-opt">Status</th>
+      </tr></thead><tbody id="tb-print"></tbody></table>
+    </div>
+  </section>
+
+  <section id="social">
+    <div class="cl-sec-e">Social media</div>
+    <h2>Content calendar: Tuesdays and Saturdays</h2>
+    <p class="cl-note">Oct 17 to Dec 15, 2026, on Facebook, Instagram, and TikTok. After Nov 8 the call to action becomes "follow for updates" until the next offer is set.</p>
+    <div class="cl-tabs" id="cl-tabs">
+      <button aria-pressed="true" data-ph="">All</button>
+      <button aria-pressed="false" data-ph="Founding pre-sale">Founding pre-sale</button>
+      <button aria-pressed="false" data-ph="Build the list">Build the list</button>
+    </div>
+    <div class="cl-card cl-tw">
+      <table data-source="social_calendar" data-row-key="post"><thead><tr>
+        <th data-field="post">#</th><th data-field="date">Date</th><th data-field="theme">Theme</th><th data-field="caption_idea">Caption idea</th><th data-field="visual" class="cl-opt">Visual</th><th data-field="cta" class="cl-opt">Call to action</th>
+      </tr></thead><tbody id="tb-social"></tbody></table>
+    </div>
+  </section>
+
+  <section id="open-items">
+    <div class="cl-sec-e">Decisions needed</div>
+    <h2>Blockers and open items</h2>
+    <p class="cl-note">Nothing can be sold until the payment link works.</p>
+    <div class="cl-card cl-tw cl-flag">
+      <table data-source="open_items" data-row-key="item"><thead><tr>
+        <th data-field="item">Item</th><th data-field="priority">Priority</th><th data-field="due">Due</th><th data-field="status" class="cl-opt">Status</th>
+      </tr></thead><tbody id="tb-open"></tbody></table>
+    </div>
+  </section>
+  <div class="cl-foot">Draft go-to-market plan for Clarity by Bishop Chadwick F. Carlton. Details may change.</div>
+</div>
+
+<script>
+// ======================================================================
+// TO UPDATE: change the numbers and text in DATA below, then commit.
+// Example: copies sold so far -> DATA.campaign[0].sold
+// ======================================================================
+const DATA = {
+ "campaign": [
+  {
+   "goal": 400,
+   "sold": 0,
+   "price": 19.99,
+   "regular_price": 24.99,
+   "shipping": 7.99,
+   "start": "2026-10-17",
+   "end": "2026-11-08T23:59:00-05:00",
+   "table_day": "2026-10-25"
+  }
+ ],
+ "weekly_targets": [
+  {
+   "period": "Prep week",
+   "dates": "Oct 17–24",
+   "target": 0,
+   "actual": 0,
+   "focus": "No sales yet. Teaser posts, line up table volunteers, poster up by Oct 21"
+  },
+  {
+   "period": "Opening day",
+   "dates": "Sun, Oct 25",
+   "target": 150,
+   "actual": 0,
+   "focus": "Sale opens at the church table after service: buy one for you, one for a friend"
+  },
+  {
+   "period": "Week 2",
+   "dates": "Oct 26–Nov 1",
+   "target": 125,
+   "actual": 0,
+   "focus": "Table follow-up, Bishop video, personal outreach"
+  },
+  {
+   "period": "Final week",
+   "dates": "Nov 2–8",
+   "target": 125,
+   "actual": 0,
+   "focus": "Last call, countdown posts, closes 11:59 PM ET Nov 8"
+  }
+ ],
+ "social_calendar": [
+  {
+   "post": 1,
+   "date": "2026-10-17",
+   "day": "Sat",
+   "phase": "Founding pre-sale",
+   "theme": "Save the date: sale opens Oct 25",
+   "caption_idea": "Clarity is coming 2027. On Sunday, October 25, the first 400 readers can become Founding Readers at $19.99, with a live Q&A with the Bishop.",
+   "visual": "Official cover with “Oct 25”",
+   "cta": "Mark your calendar: Oct 25",
+   "platforms": "Facebook, Instagram, TikTok",
+   "status": "Not started"
+  },
+  {
+   "post": 2,
+   "date": "2026-10-20",
+   "day": "Tue",
+   "phase": "Founding pre-sale",
+   "theme": "The big idea",
+   "caption_idea": "Everyone says we want change. What we need first is clarity, the ability to see better days through the smog of life.",
+   "visual": "Storm-to-light quote card",
+   "cta": "Sale opens Sunday, Oct 25",
+   "platforms": "Facebook, Instagram, TikTok",
+   "status": "Not started"
+  },
+  {
+   "post": 3,
+   "date": "2026-10-24",
+   "day": "Sat",
+   "phase": "Founding pre-sale",
+   "theme": "Sale opens tomorrow",
+   "caption_idea": "The Clarity sale opens tomorrow, October 25, at the church table after service. Buy one for you and one for a friend.",
+   "visual": "Bishop with the cover, or a table preview graphic",
+   "cta": "Come to the table Sunday",
+   "platforms": "Facebook, Instagram, TikTok",
+   "status": "Not started"
+  },
+  {
+   "post": 4,
+   "date": "2026-10-27",
+   "day": "Tue",
+   "phase": "Founding pre-sale",
+   "theme": "The sale is open + progress",
+   "caption_idea": "Thank everyone who stopped by the table on opening day. Share how many Founding spots are left.",
+   "visual": "Photos from the table",
+   "cta": "Claim one of the remaining spots",
+   "platforms": "Facebook, Instagram, TikTok",
+   "status": "Not started"
+  },
+  {
+   "post": 5,
+   "date": "2026-10-31",
+   "day": "Sat",
+   "phase": "Founding pre-sale",
+   "theme": "Meet the author",
+   "caption_idea": "Short video: Bishop Carlton shares why he wrote Clarity.",
+   "visual": "Vertical video (Reels, TikTok)",
+   "cta": "Reserve your copy",
+   "platforms": "Facebook, Instagram, TikTok",
+   "status": "Not started"
+  },
+  {
+   "post": 6,
+   "date": "2026-11-03",
+   "day": "Tue",
+   "phase": "Founding pre-sale",
+   "theme": "Chapter 4 quote",
+   "caption_idea": "“Passion is what I can do while purpose is what I must do.”",
+   "visual": "Gold quote card",
+   "cta": "Reserve your copy",
+   "platforms": "Facebook, Instagram, TikTok",
+   "status": "Not started"
+  },
+  {
+   "post": 7,
+   "date": "2026-11-07",
+   "day": "Sat",
+   "phase": "Founding pre-sale",
+   "theme": "Last call",
+   "caption_idea": "Founding Reader pricing ends November 8, 2026 at 11:59 PM Eastern.",
+   "visual": "Countdown graphic",
+   "cta": "Reserve before midnight Sunday",
+   "platforms": "Facebook, Instagram, TikTok",
+   "status": "Not started"
+  },
+  {
+   "post": 8,
+   "date": "2026-11-10",
+   "day": "Tue",
+   "phase": "Build the list",
+   "theme": "Thank you, Founding Readers",
+   "caption_idea": "Celebrate the Founding Readers and what comes next.",
+   "visual": "Thank-you card",
+   "cta": "Follow for updates",
+   "platforms": "Facebook, Instagram, TikTok",
+   "status": "Not started"
+  },
+  {
+   "post": 9,
+   "date": "2026-11-14",
+   "day": "Sat",
+   "phase": "Build the list",
+   "theme": "Chapter 5: The Light of Bitterness",
+   "caption_idea": "The bounce-back bag vs. the doormat: what to do when a door closes.",
+   "visual": "Bishop video clip",
+   "cta": "Follow for updates",
+   "platforms": "Facebook, Instagram, TikTok",
+   "status": "Not started"
+  },
+  {
+   "post": 10,
+   "date": "2026-11-17",
+   "day": "Tue",
+   "phase": "Build the list",
+   "theme": "Study Guide spotlight",
+   "caption_idea": "The Companion Study Guide is included: 13 sessions for personal study or small groups.",
+   "visual": "Study Guide page preview",
+   "cta": "Follow for updates",
+   "platforms": "Facebook, Instagram, TikTok",
+   "status": "Not started"
+  },
+  {
+   "post": 11,
+   "date": "2026-11-21",
+   "day": "Sat",
+   "phase": "Build the list",
+   "theme": "Chapter 8: Delays",
+   "caption_idea": "What an HOV lane taught the Bishop about delays.",
+   "visual": "Bishop video clip",
+   "cta": "Follow for updates",
+   "platforms": "Facebook, Instagram, TikTok",
+   "status": "Not started"
+  },
+  {
+   "post": 12,
+   "date": "2026-11-24",
+   "day": "Tue",
+   "phase": "Build the list",
+   "theme": "Thanksgiving: Stillness",
+   "caption_idea": "“Be still, and know that I am God” (Psalm 46:10, KJV), from Chapter 10.",
+   "visual": "Calm scripture card",
+   "cta": "Follow for updates",
+   "platforms": "Facebook, Instagram, TikTok",
+   "status": "Not started"
+  },
+  {
+   "post": 13,
+   "date": "2026-11-28",
+   "day": "Sat",
+   "phase": "Build the list",
+   "theme": "Chapter 11",
+   "caption_idea": "Every option is not an opportunity.",
+   "visual": "Quote card",
+   "cta": "Follow for updates",
+   "platforms": "Facebook, Instagram, TikTok",
+   "status": "Not started"
+  },
+  {
+   "post": 14,
+   "date": "2026-12-01",
+   "day": "Tue",
+   "phase": "Build the list",
+   "theme": "Behind the scenes",
+   "caption_idea": "Editing update: the Founding Reader pre-sale is funding professional editing.",
+   "visual": "Photo of the manuscript or editing session",
+   "cta": "Follow for updates",
+   "platforms": "Facebook, Instagram, TikTok",
+   "status": "Not started"
+  },
+  {
+   "post": 15,
+   "date": "2026-12-05",
+   "day": "Sat",
+   "phase": "Build the list",
+   "theme": "Chapter 1: Peripheral Vision",
+   "caption_idea": "Paying attention to the whispers at the edges.",
+   "visual": "Bishop video clip",
+   "cta": "Follow for updates",
+   "platforms": "Facebook, Instagram, TikTok",
+   "status": "Not started"
+  },
+  {
+   "post": 16,
+   "date": "2026-12-08",
+   "day": "Tue",
+   "phase": "Build the list",
+   "theme": "Chapter 3: Consistency",
+   "caption_idea": "The story of Eli and Samuel. Pull the scripture from the Study Guide's Chapter 3 anchor.",
+   "visual": "Scripture card",
+   "cta": "Follow for updates",
+   "platforms": "Facebook, Instagram, TikTok",
+   "status": "Not started"
+  },
+  {
+   "post": 17,
+   "date": "2026-12-12",
+   "day": "Sat",
+   "phase": "Build the list",
+   "theme": "Chapter 2: Preludes",
+   "caption_idea": "A story from the Bishop's beginnings, including meeting Darice.",
+   "visual": "Photo + caption (with permission)",
+   "cta": "Follow for updates",
+   "platforms": "Facebook, Instagram, TikTok",
+   "status": "Not started"
+  },
+  {
+   "post": 18,
+   "date": "2026-12-15",
+   "day": "Tue",
+   "phase": "Build the list",
+   "theme": "Two-month wrap-up",
+   "caption_idea": "Clarity is coming 2027. Thank you for walking with us.",
+   "visual": "Cover + “Coming 2027”",
+   "cta": "Follow for updates",
+   "platforms": "Facebook, Instagram, TikTok",
+   "status": "Not started"
+  }
+ ],
+ "print_materials": [
+  {
+   "item": "Lobby poster",
+   "size": "18 x 24 in",
+   "qty": 2,
+   "use": "Church lobby and entrance: cover, “Sale opens Oct 25,” 400 Founding spots, $19.99, ends Nov 8, QR code",
+   "order_by": "Oct 19",
+   "needed_by": "Oct 21",
+   "status": "Not started"
+  },
+  {
+   "item": "Table poster on easel",
+   "size": "24 x 36 in",
+   "qty": 1,
+   "use": "Oct 25 table: Buy one, give one",
+   "order_by": "Oct 20",
+   "needed_by": "Oct 25",
+   "status": "Not started"
+  },
+  {
+   "item": "Half-sheet flyer",
+   "size": "5.5 x 8.5 in",
+   "qty": 300,
+   "use": "Handouts starting Oct 21, bulletin insert and table handout on Oct 25",
+   "order_by": "Oct 19",
+   "needed_by": "Oct 21",
+   "status": "Not started"
+  },
+  {
+   "item": "Table tent",
+   "size": "4 x 6 in",
+   "qty": 2,
+   "use": "Buy one for a friend + QR code to pay",
+   "order_by": "Oct 20",
+   "needed_by": "Oct 25",
+   "status": "Not started"
+  },
+  {
+   "item": "QR payment sign",
+   "size": "8.5 x 11 in",
+   "qty": 2,
+   "use": "Scan to pay at the table",
+   "order_by": "Oct 20",
+   "needed_by": "Oct 25",
+   "status": "Not started"
+  },
+  {
+   "item": "Paper order form",
+   "size": "8.5 x 11 in",
+   "qty": 30,
+   "use": "Backup: name, email, phone, ship or pickup",
+   "order_by": "Oct 22",
+   "needed_by": "Oct 25",
+   "status": "Not started"
+  }
+ ],
+ "church_table": [
+  {
+   "step": 1,
+   "task": "Payment link or card reader working and tested",
+   "due": "Oct 23",
+   "status": "Not started"
+  },
+  {
+   "step": 2,
+   "task": "Print posters, table tents, QR signs, and order forms",
+   "due": "Oct 22",
+   "status": "Not started"
+  },
+  {
+   "step": 3,
+   "task": "Pulpit announcement by the Bishop during service",
+   "due": "Oct 25",
+   "status": "Not started"
+  },
+  {
+   "step": 4,
+   "task": "Set up table: navy or gold cloth, cover display, easel poster",
+   "due": "Oct 25",
+   "status": "Not started"
+  },
+  {
+   "step": 5,
+   "task": "Volunteers at the table to take orders",
+   "due": "Oct 25",
+   "status": "Not started"
+  },
+  {
+   "step": 6,
+   "task": "Pitch: Buy one for you, one for a friend",
+   "due": "Oct 25",
+   "status": "Not started"
+  },
+  {
+   "step": 7,
+   "task": "Collect each buyer's name, email, and phone (for the Q&A invite and order updates)",
+   "due": "Oct 25",
+   "status": "Not started"
+  },
+  {
+   "step": 8,
+   "task": "Explain these are pre-orders: the book arrives in 2027",
+   "due": "Oct 25",
+   "status": "Not started"
+  },
+  {
+   "step": 9,
+   "task": "Count orders after the table closes and update the tracker",
+   "due": "Oct 25",
+   "status": "Not started"
+  }
+ ],
+ "open_items": [
+  {
+   "item": "Payment link (Stripe or Square) for online and table sales, working before the Oct 25 opening",
+   "priority": "Critical",
+   "due": "Oct 22",
+   "status": "Open"
+  },
+  {
+   "item": "Update website: sale opens Oct 25, 400 spots, $19.99 (site shows $19.95), countdown to Oct 25",
+   "priority": "High",
+   "due": "Oct 16",
+   "status": "Open"
+  },
+  {
+   "item": "Shipping: site says $7.99 or church pickup; KDP plan says Amazon ships. Confirm one",
+   "priority": "High",
+   "due": "Oct 16",
+   "status": "Open"
+  },
+  {
+   "item": "What the offer is after Nov 8 (regular price $24.99?)",
+   "priority": "Medium",
+   "due": "Nov 8",
+   "status": "Open"
+  },
+  {
+   "item": "Print vendor and print budget",
+   "priority": "High",
+   "due": "Oct 14",
+   "status": "Open"
+  },
+  {
+   "item": "Confirm subtitle and church name spelling (H2O)",
+   "priority": "Medium",
+   "due": "Oct 16",
+   "status": "Open"
+  }
+ ]
+};
+
+// --- small helpers (no outside libraries needed) ---
+const d3 = {
+  format(spec) {
+    if (spec === ',') return (n) => Number(n).toLocaleString('en-US');
+    if (spec === '$,.2f') return (n) => '$' + Number(n).toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+    if (spec === '$,.0f') return (n) => '$' + Math.round(Number(n)).toLocaleString('en-US');
+    if (spec === '.0%') return (n) => Math.round(Number(n) * 100) + '%';
+    return (n) => String(n);
+  },
+  max(arr, f) { return arr.reduce((m, x) => Math.max(m, f(x)), -Infinity); },
+  utcFormat() { const M = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']; return (d) => M[d.getUTCMonth()] + ' ' + d.getUTCDate(); }
+};
+const _calcs = {}, _fns = [];
+const dash = {
+  data(id) { return { status: 'ok', data: id in DATA ? DATA[id] : _calcs[id] }; },
+  calc(id, o) { _calcs[id] = o.fn(...o.inputs.map((i) => DATA[i])); },
+  onData(fn) { _fns.push(fn); },
+  setLink() {}
+};
+
+
+dash.calc('totals', {
+  inputs: ['campaign'],
+  title: 'Copies left and revenue at goal',
+  description: 'Goal minus copies sold, and goal times the Founding price.',
+  fn: (campaign) => {
+    const c = campaign[0];
+    const goal = Number(c.goal), sold = Number(c.sold), price = Number(c.price);
+    return { remaining: goal - sold, revenue_goal: Math.round(goal * price * 100) / 100, pct: sold / goal };
+  }
+});
+
+const fmt = d3.format(',');
+const money = d3.format('$,.2f');
+const money0 = d3.format('$,.0f');
+let campaignRow = null;
+let socialPhase = '';
+
+function setText(el, v) { if (el) { el.textContent = v; el.classList.remove('dash-skeleton'); } }
+
+const SALE_OPEN = new Date('2026-10-25T00:00:00-04:00'); // public sale opens Sunday, Oct 25 (church table day)
+function putCount(prefix, ms) {
+  ms = Math.max(0, ms || 0);
+  document.getElementById(prefix + '-d').textContent = Math.floor(ms / 864e5);
+  document.getElementById(prefix + '-h').textContent = Math.floor(ms / 36e5) % 24;
+  document.getElementById(prefix + '-m').textContent = Math.floor(ms / 6e4) % 60;
+}
+function tick() {
+  if (!campaignRow) return;
+  const start = new Date(campaignRow.start + 'T00:00:00-04:00');
+  const end = new Date(campaignRow.end);
+  const now = new Date();
+  const goalTxt = fmt(Number(campaignRow.goal));
+  // Team countdown: internal push, Oct 17 to Nov 8
+  const lab = document.getElementById('cl-clabel');
+  if (now < end) {
+    lab.textContent = 'Goal: sell ' + goalTxt + ' books by November 8, 2026 (11:59 PM Eastern)' + (now < start ? '. Team kickoff October 17.' : '');
+    putCount('cd', end - now);
+  } else { lab.textContent = 'The ' + goalTxt + '-book goal date has passed.'; putCount('cd', 0); }
+  // Public sale countdown: to opening day Oct 25, then to close Nov 8
+  const plab = document.getElementById('cl-plabel');
+  if (now < SALE_OPEN) { plab.textContent = 'Sale opens Sunday, October 25, 2026 in'; putCount('pd', SALE_OPEN - now); }
+  else if (now < end) { plab.textContent = 'Sale is open! Founding pricing ends November 8, 2026 in'; putCount('pd', end - now); }
+  else { plab.textContent = 'The Founding Reader sale has closed.'; putCount('pd', 0); }
+}
+setInterval(tick, 30000);
+
+function fillTable(id, res, cols, render) {
+  const tb = document.getElementById(id);
+  tb.textContent = '';
+  if (res.status !== 'ok') return;
+  res.data.forEach(r => {
+    const tr = document.createElement('tr');
+    cols.forEach(c => {
+      const td = document.createElement('td');
+      if (c.cls) td.className = c.cls;
+      const v = r[c.f];
+      if (render && render(td, c.f, v, r)) { } else td.textContent = v == null ? '' : String(v);
+      tr.appendChild(td);
+    });
+    tb.appendChild(tr);
+  });
+  return tb;
+}
+
+function pill(td, v, cls) { const s = document.createElement('span'); s.className = 'cl-pill ' + (cls || ''); s.textContent = v; td.appendChild(s); return true; }
+
+dash.onData(() => {
+  const camp = dash.data('campaign');
+  const tot = dash.data('totals');
+  if (camp.status === 'ok' && camp.data.length) {
+    const c = camp.data[0];
+    campaignRow = c;
+    setText(document.querySelector('[data-field="sold"]'), fmt(Number(c.sold)));
+    setText(document.querySelector('[data-field="goal"]'), fmt(Number(c.goal)));
+    setText(document.querySelector('[data-field="price"]'), money(Number(c.price)));
+    tick();
+  }
+  if (tot.status === 'ok' && tot.data) {
+    const t = Array.isArray(tot.data) ? tot.data[0] : tot.data;
+    setText(document.querySelector('[data-field="remaining"]'), fmt(t.remaining));
+    setText(document.querySelector('[data-field="revenue_goal"]'), money0(t.revenue_goal));
+    document.getElementById('cl-progbar').style.width = Math.min(100, t.pct * 100) + '%';
+    document.getElementById('cl-pct').textContent = d3.format('.0%')(t.pct) + ' of goal';
+    if (campaignRow) document.getElementById('cl-take').textContent =
+      'Our goal: sell ' + fmt(Number(campaignRow.goal)) + ' books by November 8, 2026. ' + fmt(Number(campaignRow.sold)) + ' sold so far, ' + fmt(t.remaining) + ' to go. Sales open October 25 at the church table.';
+  }
+
+  const wk = dash.data('weekly_targets');
+  const wkEl = document.getElementById('cl-wk');
+  wkEl.textContent = '';
+  if (wk.status === 'ok') {
+    const max = d3.max(wk.data, r => Math.max(Number(r.target), Number(r.actual))) || 1;
+    wk.data.forEach(r => {
+      const row = document.createElement('div'); row.className = 'cl-wkrow';
+      const nm = document.createElement('div'); nm.className = 'cl-wkname'; nm.textContent = r.period;
+      const sm = document.createElement('small'); sm.textContent = r.dates; nm.appendChild(sm);
+      const bar = document.createElement('div'); bar.className = 'cl-wkbar';
+      const t = document.createElement('div'); t.className = 't'; t.style.width = (Number(r.target) / max * 100) + '%';
+      const a = document.createElement('div'); a.className = 'a'; a.style.width = (Number(r.actual) / max * 100) + '%';
+      const em = document.createElement('em'); em.textContent = fmt(Number(r.actual)) + ' / ' + fmt(Number(r.target));
+      bar.append(t, a, em);
+      const f = document.createElement('div'); f.className = 'cl-wkfocus'; f.textContent = r.focus;
+      row.append(nm, bar, f);
+      wkEl.appendChild(row);
+    });
+  }
+
+  fillTable('tb-table', dash.data('church_table'), [{f:'step',cls:'n'},{f:'task'},{f:'due',cls:'n'},{f:'status'}],
+    (td, f, v) => f === 'status' ? pill(td, v) : false);
+
+  fillTable('tb-print', dash.data('print_materials'), [{f:'item'},{f:'size',cls:'n'},{f:'qty',cls:'n'},{f:'use',cls:'cl-opt'},{f:'order_by',cls:'n'},{f:'needed_by',cls:'n'},{f:'status',cls:'cl-opt'}],
+    (td, f, v) => f === 'status' ? pill(td, v) : false);
+
+  const soc = dash.data('social_calendar');
+  fillTable('tb-social', soc, [{f:'post',cls:'n'},{f:'date',cls:'n'},{f:'theme'},{f:'caption_idea'},{f:'visual',cls:'cl-opt'},{f:'cta',cls:'cl-opt'}],
+    (td, f, v, r) => {
+      if (f === 'date') { td.textContent = r.day + ' ' + d3.utcFormat('%b %-d')(new Date(v)); return true; }
+      return false;
+    });
+  if (soc.status === 'ok') {
+    const rows = document.querySelectorAll('#tb-social tr');
+    soc.data.forEach((r, i) => { if (rows[i]) rows[i].classList.toggle('cl-hide', !!socialPhase && r.phase !== socialPhase); });
+  }
+
+  fillTable('tb-open', dash.data('open_items'), [{f:'item'},{f:'priority'},{f:'due',cls:'n'},{f:'status',cls:'cl-opt'}],
+    (td, f, v) => f === 'priority' ? pill(td, v, v === 'Critical' ? 'cl-crit' : v === 'High' ? 'cl-high' : '') : false);
+});
+
+document.getElementById('cl-tabs').addEventListener('click', (e) => {
+  const b = e.target.closest('button'); if (!b) return;
+  socialPhase = b.dataset.ph;
+  document.querySelectorAll('#cl-tabs button').forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+  const soc = dash.data('social_calendar');
+  if (soc.status !== 'ok') return;
+  const rows = document.querySelectorAll('#tb-social tr');
+  soc.data.forEach((r, i) => { if (rows[i]) rows[i].classList.toggle('cl-hide', !!socialPhase && r.phase !== socialPhase); });
+});
+
+
+const named = document.getElementById(location.hash.slice(1));
+if (named) setTimeout(() => { named.scrollIntoView(); dash.setLink(named.id); }, 300);
+
+
+const _run = () => _fns.forEach((f) => f());
+_run();
+let _rt; window.addEventListener('resize', () => { clearTimeout(_rt); _rt = setTimeout(_run, 150); });
+</script>
+</body>
+</html>
